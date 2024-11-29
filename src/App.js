@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from './components/Header';  // นำเข้า Header
+import BreedList from './components/BreedList';
+import Footer from './components/Footer'; // นำเข้า Footer
+import 'font-awesome/css/font-awesome.min.css';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen bg-gray-100">
+      <Header /> {/* ส่วนหัว */}
+      <main >
+        <BreedList /> {/* แสดงรายชื่อสายพันธุ์แมว */}
+      </main>
+      <Footer /> {/* ส่วนท้าย */}
     </div>
   );
 }
